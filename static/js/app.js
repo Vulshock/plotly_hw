@@ -1,5 +1,5 @@
 function plotMeta(sample_selected){
-    d3.json("https://vulshock.github.io/plotly_hw/static/js/samples.json").then((data) => {
+    d3.json("https://raw.githubusercontent.com/Vulshock/plotly_hw/master/samples.json").then((data) => {
         var pannel=d3.select('#sample-metadata');
         pannel.html('')
         var metadata=data.metadata;
@@ -11,7 +11,7 @@ function plotMeta(sample_selected){
 
 }
 function plotData(sample_selected){
-    d3.json("https://vulshock.github.io/plotly_hw/static/js/samples.json").then((data) => {
+    d3.json("https://raw.githubusercontent.com/Vulshock/plotly_hw/master/samples.json").then((data) => {
         console.log(data)
         var washFreq = data.metadata.map(d=>d.wfreq);
         console.log(`washing frequency ${washFreq}`);
