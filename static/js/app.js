@@ -93,7 +93,7 @@ function plotData(sample_selected){
 //     var selector =d3.select('#selDataset');
 
 function init(){
-d3.json('../samples.json').then((sampleData)=>{
+d3.json('https://raw.githubusercontent.com/Vulshock/plotly_hw/master/samples.json').then((sampleData)=>{
     
     sampleData.names.forEach(name=>{
         d3.select('#selDataset').append('option').text(name);
